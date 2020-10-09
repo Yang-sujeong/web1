@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      /*의미가 존재하지 않는 태그를 사용해야할 때 div 태그를 사용한다, div는 기본적으로 block level element이다.
+      span도 의미가 존재하지 않는 태그이지만 inline element이다.
+      */
+      #grid {
+        border:5px solid pink;
+        display:grid;
+        grid-template-columns:150px 1fr;
+      }
+
+      div {
+        border:5px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+   <div id="grid">
+      <div>navigation</div>
+      <div>article; a piece of writing on a particular subject in a newspaper or magazine, or on the internet:</div>
+   </div>
+  </body>
+</html>
