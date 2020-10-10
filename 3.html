@@ -2,65 +2,8 @@
 <head>
   <title>web1-JavaScript</title>
   <meta charset="utf-8">
-  <style>
-  /* -head 태그 안의 style 태그를 이용:style 태그
-     -다른 태그 안에 style 속성 사용:style 속성
-     -선택자끼리의 위계관계 존재 a<class<id : 포괄적인 것보다 구체적인것 이 영향력이 더 크다
-     - 도구더보기, 개발자 도구 창을 통해  margin,padding 어느값을 조정할지 확인한후 작업하면 된다.
-  */
-    body{
-      margin:0;
-    }
-    a {
-      color:black;
-      text-decoration: none;
-    }
-   h1 {
-     font-size:45px;
-    text-align: center;
-    border-bottom: 1px solid gray;
-    margin:0;
-    padding: 20px;
-   }
-   ol {
-     border-right:1px solid gray;
-     width:100px;
-     margin:0;
-     padding:20px;
-   }
-
-  #grid ol {
-     padding-left: 33px;
-
-   }
-
-  /* .saw {
-     color:gray;
-   }
-   */
-  /* #active {
-     color:red;
-   }
-   */
-   #grid {
-     display: grid;
-     grid-template-columns: 150px 1fr;
-   }
-  #grid #article {
-     padding: 25px;
-   }
-  @media(max-width:800px){
-    #grid {
-      display: block;
-    }
-    ol {
-      border-right: none;
-    }
-    h1 {
-     border-bottom: none;
-  }
-}
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <!--css파일을 링크로 가져옴-->
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180150821-1"></script>
 <script>
@@ -72,7 +15,19 @@
 </script>
 <body>
     <H1><a href="index.html">WEB</a></H1>
-<div id="grid">
+    <input type="button" value="night"onclick="
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
+    ">
+    <input type="button" value="day"onclick="
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';
+    ">
+    <!-- 데이터 타입: 숫자와 문자열(string)/''는 문자열
+    오탈자는 없는데 적용이 안되길래 생코에 나온대로  중간중간 대문자로 바꿨더니 적용됨
+    자바스크립트는 웹페이지 검사-콘솔의 기능을 많이 사용한다.
+  -->
+<div id="grid"> <!--그리드를 하기위해 본문을 묶음-->
   <ol>
       <li><a href="1.html">HTML</a></li>
       <li><a href="2.html">CSS</a></li>
