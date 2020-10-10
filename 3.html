@@ -2,7 +2,6 @@
 <head>
   <title>web1-JavaScript</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
   <!--css파일을 링크로 가져옴-->
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180150821-1"></script>
@@ -15,6 +14,7 @@
 </script>
 <body>
     <H1><a href="index.html">WEB</a></H1>
+    <!--
     <input type="button" value="night"onclick="
     document.querySelector('body').style.backgroundColor='black';
     document.querySelector('body').style.color='white';
@@ -23,9 +23,23 @@
     document.querySelector('body').style.backgroundColor='white';
     document.querySelector('body').style.color='black';
     ">
+  -->
+    <input id="night_day" type="button" value="night" onclick="
+    if(document.querySelector('#night_day').value==='night'){
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
+    document.querySelector('#night_day').value='day'
+  } else {
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';
+    document.querySelector('#night_day').value='night'
+  }
+    ">
+
     <!-- 데이터 타입: 숫자와 문자열(string)/''는 문자열
     오탈자는 없는데 적용이 안되길래 생코에 나온대로  중간중간 대문자로 바꿨더니 적용됨
     자바스크립트는 웹페이지 검사-콘솔의 기능을 많이 사용한다.
+    대입연산자:=
   -->
 <div id="grid"> <!--그리드를 하기위해 본문을 묶음-->
   <ol>
